@@ -1,14 +1,13 @@
+// src/components/Navigation.js
 import React from 'react';
+import './Navigation.css'; // Create this CSS file if you want to add specific styles
 
 function Navigation() {
   return (
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#learn">Learn</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#community">Community</a></li>
-      </ul>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#quiz">Quiz</a>
     </nav>
   );
 }

@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,124 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color for contrast */
+  line-height: 1.6;
+}
+
+/* Code Element Styles */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #2e2e2e; /* Slightly lighter background for code blocks */
+  color: #dcdcdc; /* Light color for text in code blocks */
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Header Styles */
+header {
+  background: #1f1f1f; /* Darker background */
+  color: #ffffff; /* White text */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); /* Darker shadow */
+}
+
+/* Navigation Styles */
+nav {
+  margin: 0;
+  padding: 10px 20px;
+  background: #2c2c2c; /* Dark navigation background */
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #00bcd4; /* Highlight color on hover */
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #1e1e1e; /* Dark content background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Styles */
+footer {
+  background: #2c2c2c;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Styles */
+button {
+  background: #00bcd4; /* Highlight color for buttons */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0198a3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Animated Background Gradient */
+@keyframes gradient {
+  0% {
+    background: linear-gradient(45deg, #1f1f1f, #2e2e2e);
+  }
+  50% {
+    background: linear-gradient(45deg, #2e2e2e, #1f1f1f);
+  }
+  100% {
+    background: linear-gradient(45deg, #1f1f1f, #2e2e2e);
+  }
+}
+
+body {
+  animation: gradient 10s ease infinite;
+}
+
+/* Animation for Elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
 }
