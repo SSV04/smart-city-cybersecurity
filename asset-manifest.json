@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/smart-city-cybersecurity/static/css/main.3b579808.css",
+    "main.js": "/smart-city-cybersecurity/static/js/main.14732e4f.js",
+    "static/js/453.71aa0cdb.chunk.js": "/smart-city-cybersecurity/static/js/453.71aa0cdb.chunk.js",
+    "index.html": "/smart-city-cybersecurity/index.html",
+    "main.3b579808.css.map": "/smart-city-cybersecurity/static/css/main.3b579808.css.map",
+    "main.14732e4f.js.map": "/smart-city-cybersecurity/static/js/main.14732e4f.js.map",
+    "453.71aa0cdb.chunk.js.map": "/smart-city-cybersecurity/static/js/453.71aa0cdb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b579808.css",
+    "static/js/main.14732e4f.js"
+  ]
+}
