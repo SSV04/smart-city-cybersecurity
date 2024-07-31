@@ -1,7 +1,7 @@
 // src/components/Quiz.js
-
 import React, { useState } from 'react';
 
+// 20 sample questions
 const questions = [
   {
     question: "What is phishing?",
@@ -16,220 +16,200 @@ const questions = [
   {
     question: "What does HTTPS stand for?",
     options: [
-      "Hypertext Transfer Protocol Secure",
-      "High Transfer Protocol Secure",
-      "Hypertext Transfer Protocol Standard",
-      "High Transfer Protocol Standard"
+      "HyperText Transfer Protocol Secure",
+      "HyperText Transfer Protocol Service",
+      "HyperText Transport Protocol Security",
+      "HyperText Transaction Protocol Secure"
     ],
     correctAnswer: 0
   },
   {
-    question: "What is a firewall used for?",
+    question: "What is a firewall?",
     options: [
-      "To cook food",
-      "To protect networks from unauthorized access",
-      "To encrypt data",
-      "To monitor network speed"
+      "A physical wall to block fire",
+      "A network security system that monitors and controls incoming and outgoing traffic",
+      "A type of virus",
+      "A method to speed up a network"
     ],
     correctAnswer: 1
   },
   {
-    question: "What is a common password hashing algorithm?",
+    question: "What is a VPN used for?",
     options: [
-      "MD5",
-      "RSA",
-      "AES",
-      "SHA-256"
-    ],
-    correctAnswer: 3
-  },
-  {
-    question: "What is a VPN?",
-    options: [
-      "Virtual Private Network",
-      "Variable Public Network",
-      "Virtual Public Network",
-      "Variable Private Network"
+      "To access the internet securely and privately",
+      "To improve network speed",
+      "To store data securely",
+      "To scan for malware"
     ],
     correctAnswer: 0
   },
   {
-    question: "What is the purpose of two-factor authentication?",
+    question: "What is two-factor authentication?",
     options: [
-      "To double the password strength",
-      "To provide an extra layer of security",
-      "To increase network speed",
-      "To encrypt data"
-    ],
-    correctAnswer: 1
-  },
-  {
-    question: "What does SQL stand for?",
-    options: [
-      "Structured Query Language",
-      "Standard Query Language",
-      "Simple Query Language",
-      "System Query Language"
+      "A method to increase login security by requiring two forms of verification",
+      "A tool to encrypt data",
+      "A technique to improve network speed",
+      "A type of malware"
     ],
     correctAnswer: 0
   },
   {
     question: "What is malware?",
     options: [
-      "Software designed to protect your computer",
-      "Software designed to harm your computer",
-      "A type of hardware",
-      "An operating system"
+      "Software designed to harm or exploit any device or network",
+      "A tool to protect against viruses",
+      "A type of secure communication",
+      "A method to enhance network performance"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
-    question: "What is social engineering?",
+    question: "What is social engineering in cybersecurity?",
     options: [
-      "A method of improving social skills",
-      "A cybersecurity attack that manipulates people",
-      "A form of data encryption",
-      "A network configuration technique"
+      "Manipulating individuals into divulging confidential information",
+      "A technique to enhance network security",
+      "A method to increase data storage",
+      "A type of encryption"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     question: "What is a DDoS attack?",
     options: [
-      "A Distributed Denial of Service attack",
-      "A Distributed Data of Service attack",
-      "A Direct Denial of Service attack",
-      "A Data Denial of Service attack"
+      "A distributed denial-of-service attack aimed at making a network resource unavailable",
+      "A type of virus",
+      "A method to improve network speed",
+      "A technique for data encryption"
     ],
     correctAnswer: 0
   },
   {
-    question: "What is encryption?",
+    question: "What is ransomware?",
     options: [
-      "A method of converting information into code",
-      "A process of data compression",
-      "A technique for improving network speed",
-      "A type of firewall configuration"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What does a phishing email typically attempt to do?",
-    options: [
-      "Provide a discount",
-      "Trick the recipient into revealing personal information",
-      "Offer a job opportunity",
-      "Ask for a donation"
-    ],
-    correctAnswer: 1
-  },
-  {
-    question: "What is a brute-force attack?",
-    options: [
-      "An attack using sophisticated software tools",
-      "An attack that tries all possible passwords",
-      "An attack that uses social engineering techniques",
-      "An attack that exploits software vulnerabilities"
-    ],
-    correctAnswer: 1
-  },
-  {
-    question: "What is a zero-day exploit?",
-    options: [
-      "An exploit that occurs on the day a vulnerability is discovered",
-      "An exploit that occurs after a vulnerability has been patched",
-      "An exploit that uses encryption techniques",
-      "An exploit that is part of regular system maintenance"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What is the main purpose of an IDS?",
-    options: [
-      "To prevent unauthorized access",
-      "To detect and alert on suspicious activity",
-      "To encrypt sensitive data",
-      "To improve network performance"
-    ],
-    correctAnswer: 1
-  },
-  {
-    question: "What is a digital certificate?",
-    options: [
-      "A document verifying the identity of a user or device",
-      "A form of encryption",
-      "A type of malware",
-      "A method for securing passwords"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What is a network packet?",
-    options: [
-      "A small unit of data transmitted over a network",
-      "A type of malware",
-      "A hardware component",
-      "A software application"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What does the acronym VPN stand for?",
-    options: [
-      "Virtual Private Network",
-      "Variable Public Network",
-      "Virtual Public Network",
-      "Variable Private Network"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What is the purpose of a DMZ in networking?",
-    options: [
-      "To create a secure area between the internal network and the internet",
-      "To monitor network traffic",
-      "To store backup data",
-      "To encrypt data"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What is a software update?",
-    options: [
-      "A modification to improve functionality or fix issues",
-      "A type of data encryption",
-      "A new version of hardware",
-      "A type of malware"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "What is a security patch?",
-    options: [
-      "A fix for a security vulnerability in software",
-      "A method for encrypting data",
-      "A new hardware component",
-      "A type of malware"
+      "Malware that encrypts a victim's data and demands payment for the decryption key",
+      "A tool to improve network speed",
+      "A method to store data securely",
+      "A type of network firewall"
     ],
     correctAnswer: 0
   },
   {
     question: "What is an IP address?",
     options: [
-      "A unique identifier for a device on a network",
-      "A type of encryption",
-      "A type of malware",
-      "A network protocol"
+      "A unique string of numbers separated by periods that identifies each computer using the Internet Protocol",
+      "A method for secure communication",
+      "A type of virus",
+      "A firewall feature"
     ],
     correctAnswer: 0
   },
   {
-    question: "What does HTTPS ensure?",
+    question: "What does the term 'phishing' refer to?",
     options: [
-      "Data encryption between the client and server",
-      "Faster data transfer",
-      "Improved network speed",
-      "Data storage"
+      "A method of attempting to acquire sensitive information by disguising as a trustworthy entity",
+      "A technique to enhance data encryption",
+      "A tool to improve network speed",
+      "A type of network firewall"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a secure password?",
+    options: [
+      "A password that is difficult to guess and includes a mix of letters, numbers, and symbols",
+      "A common word or phrase",
+      "A password with only letters",
+      "A simple numeric password"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is the purpose of an antivirus program?",
+    options: [
+      "To detect and remove malware from a computer",
+      "To enhance network speed",
+      "To encrypt data",
+      "To manage user passwords"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What does SSL stand for?",
+    options: [
+      "Secure Sockets Layer",
+      "Simple Security Layer",
+      "Secure System Layer",
+      "Socket Security Layer"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a phishing scam?",
+    options: [
+      "An attempt to obtain sensitive information by disguising as a trustworthy entity",
+      "A type of network speed enhancement",
+      "A method for secure data storage",
+      "A type of firewall"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a secure network?",
+    options: [
+      "A network protected by security measures to prevent unauthorized access",
+      "A network with high speed",
+      "A type of antivirus program",
+      "A method for encrypting data"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is an encryption key?",
+    options: [
+      "A piece of information used to encrypt and decrypt data",
+      "A type of malware",
+      "A network speed enhancement tool",
+      "A method to store passwords"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a brute-force attack?",
+    options: [
+      "A method of guessing passwords by trying all possible combinations",
+      "A technique to enhance network performance",
+      "A type of encryption algorithm",
+      "A method to detect malware"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is an exploit?",
+    options: [
+      "A piece of code that takes advantage of a vulnerability in software",
+      "A type of network speed enhancement",
+      "A method to secure data",
+      "A tool to manage passwords"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a cybersecurity breach?",
+    options: [
+      "An incident where unauthorized access is gained to a system",
+      "A type of malware",
+      "A method for data encryption",
+      "A tool to improve network speed"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is a zero-day vulnerability?",
+    options: [
+      "A security flaw that is exploited before it is known to the software vendor",
+      "A type of encryption key",
+      "A network speed enhancement tool",
+      "A method to store passwords securely"
     ],
     correctAnswer: 0
   }
@@ -253,11 +233,18 @@ function Quiz() {
     }
   };
 
+  const handleRetryClick = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowScore(false);
+  };
+
   return (
     <div className="quiz">
       {showScore ? (
         <div className="score-section">
           You scored {score} out of {questions.length}
+          <button onClick={handleRetryClick} className="retry-button">Retry</button>
         </div>
       ) : (
         <>
