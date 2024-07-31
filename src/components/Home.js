@@ -1,11 +1,13 @@
+// src/components/Home.js
 import React from 'react';
+import './Home.css'; // Create this CSS file if you want to add specific styles
 
 function Home() {
   return (
-    <div>
-      <h2>Welcome to Smart City Cybersecurity</h2>
-      <p>Learn about cybersecurity, use our tools, and join our community to make our smart city safer!</p>
-    </div>
+    <section id="home" className="fade-in">
+      <h1>Welcome to the Dark-Themed Website</h1>
+      <p>This is the home section with a dark theme.</p>
+    </section>
   );
 }
 
