@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/smart-city-cybersecurity/static/css/main.06c90a14.css",
+    "main.css": "/smart-city-cybersecurity/static/css/main.1ed966a6.css",
     "main.js": "/smart-city-cybersecurity/static/js/main.ea17b51a.js",
     "static/js/453.71aa0cdb.chunk.js": "/smart-city-cybersecurity/static/js/453.71aa0cdb.chunk.js",
     "index.html": "/smart-city-cybersecurity/index.html",
-    "main.06c90a14.css.map": "/smart-city-cybersecurity/static/css/main.06c90a14.css.map",
+    "main.1ed966a6.css.map": "/smart-city-cybersecurity/static/css/main.1ed966a6.css.map",
     "main.ea17b51a.js.map": "/smart-city-cybersecurity/static/js/main.ea17b51a.js.map",
     "453.71aa0cdb.chunk.js.map": "/smart-city-cybersecurity/static/js/453.71aa0cdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06c90a14.css",
+    "static/css/main.1ed966a6.css",
     "static/js/main.ea17b51a.js"
   ]
 }
